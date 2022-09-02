@@ -15,7 +15,7 @@ class Link(models.Model):
     name = models.CharField(max_length=100)
     url = models.URLField(max_length=500)
     date_added = models.DateTimeField(auto_now_add=True)
-    # author = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, default=None, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
