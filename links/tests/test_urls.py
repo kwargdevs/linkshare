@@ -1,7 +1,6 @@
-import pytest
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from links.views import links
+from links.views import LinksListView
 
 
 class TestUrls(SimpleTestCase):
@@ -10,4 +9,4 @@ class TestUrls(SimpleTestCase):
 
         url = reverse('links:links')
 
-        self.assertEqual(resolve(url).func, links)
+        self.assertEqual(resolve(url).func.view_class, LinksListView)
