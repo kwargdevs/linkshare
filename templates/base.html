@@ -66,5 +66,19 @@
         </ul>
         </div>
     </footer>
+<script>
+    //make the navbar responsive and work on mobile
+    const navbarToggle = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+    const navbarMenu = document.getElementById(navbarToggle.getAttribute('aria-controls'));
+    navbarToggle.addEventListener('click', () => {
+        const expanded = navbarToggle.getAttribute('aria-expanded') === 'true' || false;
+        navbarToggle.setAttribute('aria-expanded', !expanded);
+        navbarToggle.classList.toggle('active');
+        navbarMenu.classList.toggle('hidden');
+        navbarMenu.classList.toggle('flex');
+    });
+    
+
+</script>
 </body>
 </html>
