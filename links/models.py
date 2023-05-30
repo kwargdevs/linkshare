@@ -21,9 +21,6 @@ class Link(models.Model):
     category = models.ForeignKey(Category, default=None, on_delete=models.CASCADE)
 
 
-    # def get_absolute_url(self):
-    #     return reverse("link_create", "create")
-
     def __str__(self):
         return self.name
     
