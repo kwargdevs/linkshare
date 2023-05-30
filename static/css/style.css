@@ -613,11 +613,6 @@ video {
   margin-right: auto;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -805,10 +800,6 @@ video {
   align-self: center;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -951,6 +942,10 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pl-24 {
+  padding-left: 6rem;
 }
 
 .pl-3 {
@@ -1276,11 +1271,6 @@ video {
 
   .md\:order-2 {
     order: 2;
-  }
-
-  .md\:my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
   }
 
   .md\:mr-0 {
