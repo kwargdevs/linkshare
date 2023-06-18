@@ -2,11 +2,14 @@
 
 {% block content %}
 
-<div class="relative pt-24 dark:text-gray-400 pl-24">
+<div class="pt-24 dark:text-gray-400 mx-24">
     
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
             <tr>
+                <th scope="col" class="px-6 py-3">
+                    #ID
+                </th>
                 <th scope="col" class="px-6 py-3">
                     Name
                 </th>
@@ -24,7 +27,10 @@
         
         <tbody>
             {% for link in link_list %}
-            <tr class="bg-white dark:bg-gray-800">
+            <tr class="bg-white dark:bg-gray-800 border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{ link.id }}.
+                </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {{ link.name }}
                 </th>
@@ -42,32 +48,11 @@
             </tr>
             {% endfor %}
         </tbody>
-
-        <!--<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">-->
         
     </table>
 
 </div>
 
-
-    
 {% endblock content %}
-
-
-
-
-
-<!--Removed card-->
-<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://plus.unsplash.com/premium_photo-1673002094288-6c4456aa9098?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ link.name }}</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a href="{{ link.url }}" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
-            {{ link.url }}
-            <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        </a>
-    </div>
-</a>
 
 
