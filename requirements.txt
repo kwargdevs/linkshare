@@ -3,3 +3,4 @@ Django
 Pillow==9.5.0
 sqlparse==0.4.4
 gunicorn
+django-widget-tweaks==1.4.12
