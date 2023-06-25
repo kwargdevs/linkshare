@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # My Apps
     "links",
+    'users', # new
+    # Third Party Apps
+    'widget_tweaks', #new
 ]
 
 MIDDLEWARE = [
