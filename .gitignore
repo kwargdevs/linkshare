@@ -6,3 +6,5 @@ links/__pycache__/
 linkshare/__pycache__/
 jstools/node_modules/
 linkshare/migrations/
+*/__pycache__/
+db.sqlite3
