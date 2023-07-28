@@ -1,21 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
 
+# custom imports
+from .forms import UserRegistrationForm
 
-# Create your views here.
 
 def register(request):
-    if request.method != "POST":
-        form = UserCreationForm()
+    form = UserRegistrationForm()
 
-    else:
-        form = UserCreationForm(data=request.POST)
+    if request.method == "POST":
+        form = UserRegistrationForm(data=request.POST)
 
         if form.is_valid():
-            new_user = form.save()
-
-            login(request, new_user)
+            user = form.save()
+            
+            # login registered user
+            login(request, user)
+            return redirect("links:index")
 
     context = {'form': form}
     return render(request, 'registration/register.html', context)
