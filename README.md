@@ -100,6 +100,25 @@ Contributions are welcome! If you would like to contribute to LinkShare, please 
 
 5. Open a pull request in the main repository and provide a clear description of your changes.
 
+## Using the Tailwind CSS in The Project
+### cd into `jstools` folder
+1. `cd jstools`
+### Run the following command to install dependencies for tailwind css:
+
+
+2. `npm install tailwindcss autoprefixer clean-css-cli`
+
+
+### Run the following command to rebuild the tailwind css:
+
+- **Note**: Run this command everytime you make tailwind css changes.
+
+3. `npm run build`
+
+- **Also Note**: If you prefer using normal css, make your changes in the static/tailwind.css. Then run the command above everytime you make any changes i.e ``npm run build``
+
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
