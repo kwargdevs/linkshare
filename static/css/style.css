@@ -1032,6 +1032,10 @@ video {
   outline-offset: 2px;
 }
 
+.p-2\.5 {
+  padding: 0.75rem;
+}
+
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
