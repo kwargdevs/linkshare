@@ -29,10 +29,10 @@
             {% for link in link_list %}
             <tr class="bg-white dark:bg-gray-800 border-b">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ link.id }}.
+                    {{ forloop.counter }}.
                 </th>
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ link.name }}
+                    {{ link.title }}
                 </th>
                 <td class="px-6 py-4">
                     <a href="{{ link.url }}" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
@@ -43,7 +43,7 @@
                     {{ link.date_added | timesince }} ago
                 </td>
                 <td class="px-6 py-4">
-                    Edit
+                    <a href="#!">Edit</a>
                 </td>
             </tr>
             {% endfor %}
