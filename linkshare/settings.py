@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'users', # new
     # Third Party Apps
     'widget_tweaks', #new
+    'login_history',
 ]
 
 MIDDLEWARE = [
