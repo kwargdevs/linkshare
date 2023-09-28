@@ -1,12 +1,17 @@
 from django.contrib import admin
-from django.urls import path, include
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new
+from django.urls import path, include, re_path
+# from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new
 from django.contrib.auth import views as auth_views
 
 from users.forms import ResetPasswordForm, SetNewPasswordForm
 
+from django.views.static import serve
+from django.conf import settings
+
 
 urlpatterns = [
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     path("admin/", admin.site.urls),
     path("", include("links.urls")),
     path('users/', include('users.urls')), # new
@@ -36,6 +41,6 @@ urlpatterns = [
         ),
         name= "password_reset_complete"
     ),
+
 ]
 
-urlpatterns += staticfiles_urlpatterns() # new
